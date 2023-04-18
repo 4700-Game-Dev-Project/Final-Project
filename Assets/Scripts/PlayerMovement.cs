@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     [Header("Movement")]
-
-    public float moveSpeed;
+    private float moveSpeed;
+    public float walkSpeed;
     public float groundDrag;
+    public float sprintSpeed;
 
+    [Header("Jumping")]
     public float jumpForce;
     public float jumpCD;
     public float airMultiplier;
     bool readyToJump;
 
+    [Header("Crouching")]
+    public float crouchSpeed;
+    public float crouchYScale;
+    private float startYScale;
+
+
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode crouchKey = KeyCode.LeftControl;
 
 
     [Header("Ground Check")]
@@ -26,8 +36,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform orientation;
 
     [Header("Sound Effect")]
-    public AudioSource walkSound;
+  //  public AudioSource walkSound;
 
+/// 
 
     float horizontalInput;
     float verticalInput;
@@ -36,7 +47,24 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
-    float sprintSpeed;
+    
+
+    public MovementState state;
+
+    public enum MovementState
+    {
+        walking,
+        sprinting,
+        crouching,
+        air
+    }
+
+    public enum PowerUps
+    {
+        superspeed,
+        addHP
+    }
+
 
     private void Start()
     {
@@ -44,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
      //   isRunning = false;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        startYScale = transform.localScale.y;
     }
 
     private void Update()
@@ -51,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         GroundCheck();
         MyInput();
         SpeedControl();
+        StateHandler();
         if (grounded)
             rb.drag = groundDrag;
         else
@@ -83,11 +114,26 @@ public class PlayerMovement : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCD); // continously jump when holding jump key
         }
-        bool isMovingOnGround = (horizontalInput != 0f || verticalInput != 0f) && grounded;
-        if (isMovingOnGround)
-            walkSound.enabled = true;
-        else
-            walkSound.enabled = false;
+
+        //when to make walking sound
+      //  bool isMovingOnGround = (horizontalInput != 0f || verticalInput != 0f) && grounded;
+     //   if (isMovingOnGround)
+           // walkSound.enabled = true;
+       // else
+           // walkSound.enabled = false;
+
+        //start crouch
+        if (Input.GetKeyDown(crouchKey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        }
+
+        if (Input.GetKeyUp(crouchKey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        }
+
     }
 
     private void MovePlayer()
@@ -106,18 +152,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        //if (flatVel.magnitude > 0)
-        //     isRunning = true;
-        //  else
-        //     isRunning = false;
-        if (Input.GetKey(sprintKey))
-        {
-            sprintSpeed = moveSpeed * 4;
-        }
-        else
-            sprintSpeed = moveSpeed;
+       
         // limit velocity
-        if(flatVel.magnitude > sprintSpeed)
+        if(flatVel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
@@ -147,4 +184,31 @@ public class PlayerMovement : MonoBehaviour
   //          footstepsSound.enabled = false;
  //   }
 
+    private void StateHandler()
+    {
+
+        // Mode - Crouching
+        if (Input.GetKey(crouchKey))
+        {
+            state = MovementState.crouching;
+            moveSpeed = crouchSpeed;
+        }
+        // Mode - Sprinting
+        else if(grounded && Input.GetKey(sprintKey))
+        {
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+        }
+        // Mode - Walking
+        else if (grounded)
+        {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+        }
+        // Mode - Air
+        else
+        {
+            state = MovementState.air;
+        }
+    }
 }
