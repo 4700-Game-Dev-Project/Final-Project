@@ -106,14 +106,14 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         //when to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+       /* if(Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
             Jump();
 
             Invoke(nameof(ResetJump), jumpCD); // continously jump when holding jump key
-        }
+        }*/
 
         //when to make walking sound
       //  bool isMovingOnGround = (horizontalInput != 0f || verticalInput != 0f) && grounded;
