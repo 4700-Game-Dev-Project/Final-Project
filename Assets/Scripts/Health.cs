@@ -6,25 +6,24 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public Image FillImage;
-    public float CurrentHealth;
-
-    public void UpdateHP()
+    private float CurrentHealth;
+    public AttributesManager playerAtm;
+    
+    private void Start()
     {
-        FillImage.fillAmount = CurrentHealth / 100;
-        Debug.Log("clicked");
+        //playerAtm = GetComponent<AttributesManager>();
+        CurrentHealth = playerAtm.GetHealth();
     }
+
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.P))
-        {
-            CurrentHealth+=0.05f;
-            UpdateHP();
-        }
-        else if (Input.GetKey(KeyCode.O))
-        {
-            CurrentHealth -= 0.05f;
-            UpdateHP();
-        }
+        UpdateHP();
+    }
+
+    public void UpdateHP()
+    {
+        CurrentHealth = playerAtm.GetHealth();
+        FillImage.fillAmount = CurrentHealth / 100;
     }
 }
