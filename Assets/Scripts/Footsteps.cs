@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Footsteps : MonoBehaviour
 {
-    public AudioSource walkSound, sprintSound, jumpSound;
+    public AudioSource walkSound, sprintSound;
     Rigidbody rb;
 
     private void Start()
