@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Footsteps : MonoBehaviour
 {
-    public AudioSource footstepsSound, sprintSound, jumpSound;
+    public AudioSource walkSound, sprintSound, jumpSound;
     Rigidbody rb;
 
     private void Start()
@@ -15,9 +15,21 @@ public class Footsteps : MonoBehaviour
     private void Update()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-            footstepsSound.enabled = true;
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                walkSound.enabled = false;
+                sprintSound.enabled = true;
+            }
+            else
+            {
+                walkSound.enabled = true;
+                sprintSound.enabled = false;
+            }
+        }
+            
         else
-            footstepsSound.enabled = false;
+            walkSound.enabled = false;
     }
 
 }
