@@ -26,8 +26,11 @@ public class PartyState : MonoBehaviour
 
     public bool seePlayer;
 
+    private AttributesManager attriMan;
+
     void Start()
     {
+        attriMan = GetComponent<AttributesManager>();
         m_Rigidbody = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
 
@@ -70,7 +73,8 @@ public class PartyState : MonoBehaviour
         {
             if (lineOfSightCheck(explosionCheck[0].transform))
             {
-                Debug.Log("DMG");   //Replace with function call on player, later
+                //Debug.Log("DMG");
+                attriMan.DealDamage(player);
             }
         }
 

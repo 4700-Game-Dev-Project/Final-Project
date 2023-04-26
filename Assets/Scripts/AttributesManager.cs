@@ -9,7 +9,9 @@ public class AttributesManager : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        Debug.Log("Damage Taken: " + amount);
         health -= amount;
+        Debug.Log("CurrentHealth: " + health);
     }
     public void DealDamage(GameObject target)
     {

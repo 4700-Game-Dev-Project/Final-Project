@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1300709493471737322}
   - component: {fileID: 1300709493471737321}
   - component: {fileID: 1300709493471737320}
+  - component: {fileID: 3340709290566443993}
   m_Layer: 12
   m_Name: Skeleton
   m_TagString: Untagged
@@ -155,7 +156,7 @@ MonoBehaviour:
   visionRange: 15
   visionAngle: 90
   rotationSpeed: 3
-  metalonTimer: 8
+  skeletonTimer: 8
   chaseTimer: 0.5
   contactCD: 1
   hitboxDimensions: {x: 0, y: 0, z: 0}
@@ -167,6 +168,20 @@ MonoBehaviour:
     m_Bits: 2048
   seePlayer: 0
   waypoints: []
+--- !u!114 &3340709290566443993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300709493471737319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c06981799a71348b8ab59b7ad64dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  attack: 2
 --- !u!1 &1300709494691096466
 GameObject:
   m_ObjectHideFlags: 0

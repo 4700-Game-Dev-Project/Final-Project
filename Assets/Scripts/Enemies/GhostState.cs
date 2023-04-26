@@ -24,8 +24,11 @@ public class GhostState : MonoBehaviour
 
     public bool seePlayer;
 
+    private AttributesManager attriMan;
+
     void Start()
     {
+        attriMan = GetComponent<AttributesManager>();
         m_Rigidbody = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
@@ -69,7 +72,8 @@ public class GhostState : MonoBehaviour
     private IEnumerator contactRoutine()
     {
         contactOnCD = true;
-        Debug.Log("DMG");
+        //Debug.Log("DMG");
+        attriMan.DealDamage(player);
 
         yield return new WaitForSeconds(contactCD);
 

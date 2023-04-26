@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 2587936385711632481}
   - component: {fileID: 2587936385711632494}
   - component: {fileID: 2587936385711632495}
+  - component: {fileID: -1682643680157657081}
   m_Layer: 12
   m_Name: Party Mon
   m_TagString: Untagged
@@ -236,3 +237,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   seePlayer: 0
+--- !u!114 &-1682643680157657081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587936385711632492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c06981799a71348b8ab59b7ad64dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  attack: 4
