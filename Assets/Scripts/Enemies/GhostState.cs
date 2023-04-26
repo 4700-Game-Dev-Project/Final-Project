@@ -34,7 +34,7 @@ public class GhostState : MonoBehaviour
         hitboxDimensions = (transform.localScale * 1.1f) / 2f;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //Handles rotation
         Vector3 targetDirection = agent.steeringTarget - transform.position;
