@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.243
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03093815, g: 0.03259786, b: 0.029422125, a: 0.243}
+  m_IndirectSpecularColor: {r: 0.030938005, g: 0.032597724, b: 0.029422052, a: 0.243}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -541,6 +541,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FillImage: {fileID: 98021785}
   playerAtm: {fileID: 1445123336}
+--- !u!1 &106204486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2806310725765061102, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
+  m_PrefabInstance: {fileID: 1766513259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &106204492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106204486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c06981799a71348b8ab59b7ad64dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  attack: 1
 --- !u!1 &108026260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,6 +3934,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1405635808392606737, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 2643001834704937000, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17
@@ -5589,6 +5612,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1405635808392606737, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 2643001834704937000, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -6210,6 +6237,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837567385}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1840992161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2806310725765061102, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
+  m_PrefabInstance: {fileID: 1166247376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1840992167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840992161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c06981799a71348b8ab59b7ad64dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  attack: 1
 --- !u!1 &1845744618
 GameObject:
   m_ObjectHideFlags: 0
@@ -7591,6 +7637,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7586093321967573247, guid: 4b437f1c2454a2c409b1b7f35e69d661, type: 3}
   m_PrefabInstance: {fileID: 2099811677}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2127046627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2806310725765061102, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
+  m_PrefabInstance: {fileID: 2643001833728695377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2127046633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127046627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c06981799a71348b8ab59b7ad64dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  attack: 1
 --- !u!4 &2127264137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2643001834780861912, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
@@ -7757,6 +7822,10 @@ PrefabInstance:
     - target: {fileID: 1405635808392606737, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
       propertyPath: speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405635808392606737, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 2643001834780861912, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
       propertyPath: m_RootOrder
