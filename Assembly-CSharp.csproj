@@ -38,7 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Enemies\GhostState.cs" />
-     <Compile Include="Assets\Scripts\MainScreen\TitleScreenMgr.cs" />
+     <Compile Include="Assets\Scripts\ScreenUIs\TitleScreenMgr.cs" />
      <Compile Include="Assets\Scripts\Footsteps.cs" />
      <Compile Include="Assets\Scripts\OneSidedDoorTrigger.cs" />
      <Compile Include="Assets\Scripts\Enemies\PartyState.cs" />
@@ -46,12 +46,15 @@
      <Compile Include="Assets\Scripts\Enemies\SkeletonState.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\DmgTest.cs" />
+     <Compile Include="Assets\Scripts\ScreenUIs\LevelScript.cs" />
      <Compile Include="Assets\Scripts\Enemies\MetalonState.cs" />
      <Compile Include="Assets\Scripts\AttributesManager.cs" />
      <Compile Include="Assets\Scripts\Enemies\Spider.cs" />
      <Compile Include="Assets\Scripts\PlayerCam.cs" />
      <Compile Include="Assets\Scripts\HealthChange.cs" />
      <Compile Include="Assets\Scripts\StartDoorTrigger.cs" />
+     <Compile Include="Assets\Scripts\ScreenUIs\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\ScreenUIs\LevelMgr.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
