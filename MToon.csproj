@@ -37,11 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\Enums.cs" />
-     <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\Utils.cs" />
      <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\UtilsVersion.cs" />
-     <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\UtilsGetter.cs" />
      <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\MToonDefinition.cs" />
      <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\UtilsSetter.cs" />
+     <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\Utils.cs" />
+     <Compile Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Scripts\UtilsGetter.cs" />
      <None Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Resources\Shaders\MToon.shader" />
      <None Include="Assets\Animations\Girl\DemoScene\Shader\MToon\MToon.asmdef" />
      <None Include="Assets\Animations\Girl\DemoScene\Shader\MToon\Resources\Shaders\MToonSM4.cginc" />

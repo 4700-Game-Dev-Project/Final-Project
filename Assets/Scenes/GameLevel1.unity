@@ -18524,8 +18524,8 @@ Transform:
   - {fileID: 1836719196}
   - {fileID: 1818751129}
   - {fileID: 2137395277}
-  - {fileID: 1443170941}
   - {fileID: 909219975}
+  - {fileID: 1443170941}
   - {fileID: 343073011}
   - {fileID: 401284970}
   m_Father: {fileID: 0}
@@ -26013,6 +26013,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1062709748452498828, guid: 7b4bda44fdbbb774eb6355629fc4a7e8, type: 3}
       propertyPath: m_AutoTraverseOffMeshLink
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1062709748452498829, guid: 7b4bda44fdbbb774eb6355629fc4a7e8, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1062709748452498830, guid: 7b4bda44fdbbb774eb6355629fc4a7e8, type: 3}
