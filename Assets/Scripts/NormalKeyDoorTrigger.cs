@@ -33,18 +33,10 @@ public class NormalKeyDoorTrigger : MonoBehaviour
                 gameObject.SetActive(false);
                 Debug.Log("Has key 2 = "+hasKey2);
             }
-            else if (isKey1 && isKey2)
-            {
-                hasKey1 = true;
-                hasKey2 = true;
-                gameObject.SetActive(false);
-                Debug.Log("Has key 1 = "+hasKey1);
-                Debug.Log("Has key 2 = "+hasKey2);
-            }
 
             if (hasKey1 && hasKey2)
             {
-                if (openTriggerA && !openedFromSideB) 
+                if (openTriggerA && !openedFromSideB && !openedFromSideA) 
                 {
                     if (is90)
                     {
@@ -72,7 +64,7 @@ public class NormalKeyDoorTrigger : MonoBehaviour
                     }
                 }
 
-                if (openTriggerB && !openedFromSideA)
+                if (openTriggerB && !openedFromSideA && !openedFromSideB)
                 {
                     if (is90)
                     {  

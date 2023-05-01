@@ -19,7 +19,7 @@ public class NormalDoorTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (openTriggerA && !openedFromSideB) 
+            if (openTriggerA && !openedFromSideB && !openedFromSideA) 
             {
                 if (is90)
                 {
@@ -46,7 +46,7 @@ public class NormalDoorTrigger : MonoBehaviour
                 }
             }
 
-            if (openTriggerB && !openedFromSideA)
+            if (openTriggerB && !openedFromSideA && !openedFromSideB)
             {
                 if (is90)
                 {
