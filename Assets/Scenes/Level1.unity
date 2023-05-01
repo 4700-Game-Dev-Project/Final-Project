@@ -2164,6 +2164,7 @@ MonoBehaviour:
   closeTriggerA: 1
   openTriggerB: 0
   closeTriggerB: 0
+  is90: 0
 --- !u!1001 &137715233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10802,6 +10803,7 @@ MonoBehaviour:
   closeTriggerA: 0
   openTriggerB: 0
   closeTriggerB: 0
+  is90: 0
 --- !u!1001 &721176051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13173,6 +13175,7 @@ MonoBehaviour:
   closeTriggerA: 0
   openTriggerB: 0
   closeTriggerB: 1
+  is90: 0
 --- !u!65 &867738596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16400,6 +16403,7 @@ MonoBehaviour:
   closeTriggerA: 0
   openTriggerB: 1
   closeTriggerB: 0
+  is90: 0
 --- !u!65 &1117775066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17710,6 +17714,7 @@ MonoBehaviour:
   closeTriggerA: 0
   openTriggerB: 0
   closeTriggerB: 0
+  is90: 0
 --- !u!1001 &1202100270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20055,6 +20060,7 @@ MonoBehaviour:
   closeTriggerA: 1
   openTriggerB: 0
   closeTriggerB: 0
+  is90: 0
 --- !u!65 &1414218912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20459,7 +20465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1287245724461440769, guid: 4b0d2ea51ebd97f4d91249e4c9bbefc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3478
+      value: 12.93
       objectReference: {fileID: 0}
     - target: {fileID: 1287245724461440769, guid: 4b0d2ea51ebd97f4d91249e4c9bbefc4, type: 3}
       propertyPath: m_LocalPosition.z

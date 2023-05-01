@@ -10,6 +10,7 @@ public class OneSidedDoorTrigger : MonoBehaviour
     [SerializeField] private bool closeTriggerA = false;
     [SerializeField] private bool openTriggerB = false;
     [SerializeField] private bool closeTriggerB = false;
+    [SerializeField] private bool is90 = false;
     private static bool openedFromOneSide = false;
     private static bool helper = false;
     private static bool openedFromSideA = false;
@@ -22,34 +23,76 @@ public class OneSidedDoorTrigger : MonoBehaviour
             {
                 if (!openedFromOneSide)
                 {
-                    myDoor.Play("door_open", 0, 0.0f);
-                    openedFromOneSide = true;
-                    openedFromSideA = true;
+                    if (is90)
+                    {
+                        myDoor.Play("door_open_90", 0, 0.0f);
+                        openedFromOneSide = true;
+                        openedFromSideA = true;
+                    }
+                    else
+                    {
+                        myDoor.Play("door_open", 0, 0.0f);
+                        openedFromOneSide = true;
+                        openedFromSideA = true;
+                    }
                 }
                 else if (helper)
                 {
-                    myDoor.Play("door_open", 0, 0.0f);
-                    openedFromSideA = true;
+                    if (is90)
+                    {
+                        myDoor.Play("door_open_90", 0, 0.0f);
+                        openedFromSideA = true;
+                    }
+                    else
+                    {
+                        myDoor.Play("door_open", 0, 0.0f);
+                        openedFromSideA = true;
+                    }
                 }
             }
             else if (closeTriggerA && openedFromOneSide && openedFromSideA)
             {
-                myDoor.Play("door_close", 0, 0.0f);
-                openedFromSideA = false;
+                if (is90)
+                {
+                    myDoor.Play("door_close_90", 0, 0.0f);
+                    openedFromSideA = false;
+                }
+                else
+                {
+                    myDoor.Play("door_close", 0, 0.0f);
+                    openedFromSideA = false;
+                }
             }
 
             if (openTriggerB && !openedFromSideA && !openedFromSideB && openedFromOneSide)
             {
-                myDoor.Play("door_open", 0, 0.0f);
-                openedFromSideB = true;
+                if (is90)
+                {
+                    myDoor.Play("door_open_90", 0, 0.0f);
+                    openedFromSideB = true;
+                }
+                else
+                {
+                    myDoor.Play("door_open", 0, 0.0f);
+                    openedFromSideB = true;
+                }
             }
             else if (closeTriggerB && openedFromSideB)
             {
                 if (openedFromOneSide)
                 {
-                    myDoor.Play("door_close", 0, 0.0f);
-                    openedFromSideB = false;
-                    helper = true;
+                    if (is90)
+                    {
+                        myDoor.Play("door_close_90", 0, 0.0f);
+                        openedFromSideB = false;
+                        helper = true;
+                    }
+                    else 
+                    {
+                        myDoor.Play("door_close", 0, 0.0f);
+                        openedFromSideB = false;
+                        helper = true;
+                    }
                 }
             }
         }

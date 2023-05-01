@@ -9,42 +9,94 @@ public class NormalKeyDoorTrigger : MonoBehaviour
     [SerializeField] private bool closeTriggerA = false;
     [SerializeField] private bool openTriggerB = false;
     [SerializeField] private bool closeTriggerB = false;
-    [SerializeField] private bool isKey = false;
+    [SerializeField] private bool isKey1 = false;
+    [SerializeField] private bool isKey2 = false;
+    [SerializeField] private bool is90 = false;
     private static bool openedFromSideA = false;
     private static bool openedFromSideB = false;
-    private static bool hasKey = false;
+    private static bool hasKey1 = false;
+    private static bool hasKey2 = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (isKey)
+            if (isKey1)
             {
-                hasKey = true;
+                hasKey1 = true;
+                gameObject.SetActive(false);
+                Debug.Log("Has key 1 = "+hasKey1);
+            }
+            else if (isKey2)
+            {
+                hasKey2 = true;
+                gameObject.SetActive(false);
+                Debug.Log("Has key 2 = "+hasKey2);
+            }
+            else if (isKey1 && isKey2)
+            {
+                hasKey1 = true;
+                hasKey2 = true;
+                gameObject.SetActive(false);
+                Debug.Log("Has key 1 = "+hasKey1);
+                Debug.Log("Has key 2 = "+hasKey2);
             }
 
-            if (hasKey)
+            if (hasKey1 && hasKey2)
             {
-                if (openTriggerA && !openedFromSideB)
+                if (openTriggerA && !openedFromSideB) 
                 {
-                    myDoor.Play("door_open", 0, 0.0f);
-                    openedFromSideA = true;
+                    if (is90)
+                    {
+                        myDoor.Play("door_open_90", 0, 0.0f);
+                        openedFromSideA = true;
+                        Debug.Log("cum");
+                    }
+                    else
+                    {
+                        myDoor.Play("door_open", 0, 0.0f);
+                        openedFromSideA = true;
+                    }
                 }
-                else if (closeTriggerA && openedFromSideA)
+                else if (closeTriggerA && openedFromSideA) 
                 {
-                    myDoor.Play("door_close", 0, 0.0f);
-                    openedFromSideA = false;
+                    if (is90)
+                    {
+                        myDoor.Play("door_close_90", 0, 0.0f);
+                        openedFromSideA = false;
+                    }
+                    else
+                    {
+                        myDoor.Play("door_close", 0, 0.0f);
+                        openedFromSideA = false;
+                    }
                 }
 
                 if (openTriggerB && !openedFromSideA)
                 {
-                    myDoor.Play("door_open", 0, 0.0f);
-                    openedFromSideB = true;
+                    if (is90)
+                    {  
+                        myDoor.Play("door_open_90", 0, 0.0f);
+                        openedFromSideB = true;
+                    }
+                    else
+                    {
+                        myDoor.Play("door_open", 0, 0.0f);
+                        openedFromSideB = true;
+                    }
                 }
-                else if (closeTriggerB && openedFromSideB)
+                else if (closeTriggerB && openedFromSideB) 
                 {
-                    myDoor.Play("door_close", 0, 0.0f);
-                    openedFromSideB = false;
+                    if (is90)
+                    {
+                        myDoor.Play("door_close_90", 0, 0.0f);
+                        openedFromSideB = false;
+                    }
+                    else
+                    {
+                        myDoor.Play("door_close", 0, 0.0f);
+                        openedFromSideB = false;
+                    }
                 }
             }
         }
