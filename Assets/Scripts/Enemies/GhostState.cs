@@ -26,6 +26,9 @@ public class GhostState : MonoBehaviour
 
     private AttributesManager attriMan;
 
+    public bool isMoving;
+    private Vector3 lastPosition;
+
     void Start()
     {
         attriMan = GetComponent<AttributesManager>();
@@ -35,6 +38,9 @@ public class GhostState : MonoBehaviour
 
         seePlayer = false;
         hitboxDimensions = (transform.localScale * 1.1f) / 2f;
+
+        isMoving = false;
+        lastPosition = transform.position;
     }
 
     void FixedUpdate()
@@ -64,6 +70,17 @@ public class GhostState : MonoBehaviour
         }
 
         StartCoroutine(visionRoutine());
+
+        //Detects movement for the sake of animation
+        if (transform.position != lastPosition)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
+        lastPosition = transform.position;
     }
 
     //Not fully implemented yet; this is so we can have something happen when this object damages the player,

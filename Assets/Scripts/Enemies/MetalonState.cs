@@ -9,7 +9,8 @@ public class MetalonState : MonoBehaviour
     private Rigidbody m_Rigidbody;
     // position to return to 
     private Vector3 originalPosition;
-    public Vector3 originalLookDirection;
+    private Vector3 originalLookDirection;
+    public Vector3 setLookDirection = new Vector3(0, 0, 0);
 
     public float visionRange = 15f;
     [Range(0,360)]public float visionAngle = 90f;
@@ -30,6 +31,9 @@ public class MetalonState : MonoBehaviour
 
     private AttributesManager attriMan;
 
+    public bool isMoving;
+    private Vector3 lastPosition;
+
     void Start()
     {
         attriMan = GetComponent<AttributesManager>();
@@ -40,12 +44,26 @@ public class MetalonState : MonoBehaviour
         seePlayer = false;
         shouldChase = true;
         originalPosition = transform.position;
-        originalLookDirection = new Vector3(transform.position.x, transform.position.y, transform.position.z+10f);
+        originalLookDirection = new Vector3(transform.position.x+setLookDirection.x, transform.position.y+setLookDirection.y, transform.position.z + setLookDirection.z);
         hitboxDimensions = (transform.localScale * 1.1f) / 2f;
+
+        isMoving = false;
+        lastPosition = transform.position;
     }
+
 
     void FixedUpdate()
     {
+        if (transform.position != lastPosition)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
+        lastPosition = transform.position;
+
         //singleStep is to help handle rotation
         float singleStep = rotationSpeed * Time.deltaTime;
         if (transform.position.x == originalPosition.x && transform.position.z == originalPosition.z)

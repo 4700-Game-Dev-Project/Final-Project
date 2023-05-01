@@ -13,7 +13,7 @@ public class PartyState : MonoBehaviour
     public float explosionTimer = 3.0f;  // It takes this long to explode
     public float explosionRange = 7.5f;
     private Vector3 explosionDimensions;
-    private bool triggered;
+    public bool triggered;
 
     /* These variables handle physical contact with the player, which is not implemented as of now
     public float contactCD = 1.0f; //A cooldown on anything that happens when this object contacts the player
@@ -27,6 +27,8 @@ public class PartyState : MonoBehaviour
     public bool seePlayer;
 
     private AttributesManager attriMan;
+
+    public Transform explosion;
 
     void Start()
     {
@@ -64,7 +66,7 @@ public class PartyState : MonoBehaviour
 
         triggered = true;
 
-        yield return new WaitForSeconds(explosionTimer);
+        yield return new WaitForSeconds(explosionTimer - 0.5f);
 
         Debug.Log("EXPLOSION"); //Replace with animation stuff later
 
@@ -77,6 +79,10 @@ public class PartyState : MonoBehaviour
                 attriMan.DealDamage(player);
             }
         }
+
+        Instantiate(explosion, new Vector3(transform.position.x, transform.position.y-1f, transform.position.z), Quaternion.identity);
+
+        yield return new WaitForSeconds(0.5f);
 
         Destroy(gameObject);    //Delete self
     }
