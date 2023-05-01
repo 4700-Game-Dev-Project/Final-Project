@@ -59,6 +59,15 @@
      <Compile Include="Assets\Scripts\NormalKeyDoorTrigger.cs" />
      <Compile Include="Assets\Scripts\FinalDoorTrigger.cs" />
      <Compile Include="Assets\Scripts\ItemFloat.cs" />
+     <Compile Include="Assets\Animations\Girl\DemoScene\Scripts\MyLightSc.cs" />
+     <Compile Include="Assets\Scripts\Enemies\PartyAnimator.cs" />
+     <Compile Include="Assets\Animations\Girl\DemoScene\Scripts\Emotions.cs" />
+     <Compile Include="Assets\Animations\Girl\DemoScene\Scripts\Akane_CharacterController.cs" />
+     <Compile Include="Assets\Scripts\Enemies\GhostAnimator.cs" />
+     <Compile Include="Assets\Scripts\Enemies\GirlAnimator.cs" />
+     <Compile Include="Assets\Scripts\Enemies\MetalonAnimator.cs" />
+     <Compile Include="Assets\Scripts\Enemies\GirlState.cs" />
+     <Compile Include="Assets\Animations\Girl\DemoScene\Scripts\Akane_CameraScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -74,6 +83,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Animations\PartyMonsterDuo\_EXPLOSION THINGS\etc\MatCap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
