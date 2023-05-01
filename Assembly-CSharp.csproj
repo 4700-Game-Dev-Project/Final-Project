@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Enemies\PartyAnimator.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript1.cs" />
      <Compile Include="Assets\Scripts\Enemies\GhostState.cs" />
      <Compile Include="Assets\Scripts\ScreenUIs\TitleScreenMgr.cs" />
      <Compile Include="Assets\Scripts\Footsteps.cs" />
@@ -51,6 +52,7 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Enemies\SkeletonState.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\Enemies\GirlState.cs" />
      <Compile Include="Assets\Scripts\DmgTest.cs" />
      <Compile Include="Assets\Animations\Girl\DemoScene\Scripts\MyLightSc.cs" />

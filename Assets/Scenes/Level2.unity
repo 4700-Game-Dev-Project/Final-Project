@@ -7818,8 +7818,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396864650}
   m_LocalRotation: {x: 0.0062264586, y: 0.7035707, z: 0.0073881624, w: 0.71055967}
-  m_LocalPosition: {x: 4.16, y: 52.27, z: -51.33}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 8.45178}
+  m_LocalPosition: {x: 4.16, y: 52.27, z: -53.4982}
+  m_LocalScale: {x: 1.1000218, y: 0.5, z: 13.310709}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1175297013}
@@ -11663,7 +11663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621765277}
   m_LocalRotation: {x: 0.0062264586, y: 0.7035707, z: 0.0073881624, w: 0.71055967}
-  m_LocalPosition: {x: 4.16, y: 52.27, z: -46.547}
+  m_LocalPosition: {x: 4.16, y: 52.27, z: -49.093}
   m_LocalScale: {x: 0.5, y: 0.5, z: 11.7124}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12936,6 +12936,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9b3b22dd59f1954ab57f0d413c9ac6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c9b3b22dd59f1954ab57f0d413c9ac6d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c9b3b22dd59f1954ab57f0d413c9ac6d, type: 3}
@@ -34062,7 +34066,7 @@ GameObject:
   - component: {fileID: 1893955343}
   - component: {fileID: 1893955347}
   m_Layer: 0
-  m_Name: doortrig (29)
+  m_Name: finalkeylvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
