@@ -20,7 +20,15 @@ public class PlayerCam : MonoBehaviour
 
     private void Update()
     {
-        MouseCam();
+        if(PauseMenu.paused)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Debug.Log("game is paused and mouse is free");
+        }
+        else{
+            Cursor.lockState = CursorLockMode.Locked;
+            MouseCam();
+        }
     }
     private void MouseCam()
     {

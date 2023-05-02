@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject escMenu;
-    public bool paused;
+    public static bool paused;
     public AudioSource spaceOnClick;
     //EventSystem eventSystem = EventSystemManager.currentSystem;
     public GameObject btn;
