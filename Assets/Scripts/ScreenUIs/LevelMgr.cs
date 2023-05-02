@@ -12,20 +12,27 @@ public class LevelMgr : MonoBehaviour
     {
         levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
 
+        SetUpButtons();
+    }
+
+    public void ResetGame()
+    {
+        levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
+        PlayerPrefs.DeleteAll();
+        SetUpButtons();
+        Debug.Log("Levels unlocked reset: " + levelsUnlocked);
+    }
+
+    private void SetUpButtons()
+    {
         for(int i = 0; i< lvlButtons.Length; i++)
         {
             lvlButtons[i].interactable = false;
         }
-
+        Debug.Log("Levels unlocked: " + levelsUnlocked);
         for(int i = 0; i<levelsUnlocked; i++)
         {
             lvlButtons[i].interactable = true;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
