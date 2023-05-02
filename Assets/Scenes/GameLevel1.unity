@@ -31974,7 +31974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2111075862822457924, guid: fe54289d8a6581c48b9dc0af336d2fd1, type: 3}
       propertyPath: addSprintSpeed
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2111075862822457924, guid: fe54289d8a6581c48b9dc0af336d2fd1, type: 3}
       propertyPath: crouchSpeedDeduct
