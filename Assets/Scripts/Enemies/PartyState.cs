@@ -30,8 +30,16 @@ public class PartyState : MonoBehaviour
 
     public Transform explosion;
 
+
+    [Header("Sound")]
+    public AudioSource partyClownSound;
+    public AudioSource partyPopSound;
+    public AudioSource partyConfettiSound;
+
     void Start()
     {
+        //partyClownSound = GetComponent<AudioSource>();
+
         attriMan = GetComponent<AttributesManager>();
         m_Rigidbody = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
@@ -39,6 +47,10 @@ public class PartyState : MonoBehaviour
         seePlayer = false;
         triggered = false;
         explosionDimensions = new Vector3(explosionRange, explosionRange, explosionRange);
+
+        partyClownSound.enabled = false;
+        partyPopSound.enabled = false;
+        partyConfettiSound.enabled = false;
         //hitboxDimensions = (transform.localScale * 1.1f) / 2f;
     }
 
@@ -51,6 +63,10 @@ public class PartyState : MonoBehaviour
             StartCoroutine(explosionRoutine());
         }
 
+        if (seePlayer)
+            partyClownSound.enabled = true;
+        else
+            partyClownSound.enabled = false;
         /* This is for physical contact with the player in case we end up wanting something to happen with that
         //Detects collision with player based on hitbox
         Collider[] hitbox = Physics.OverlapBox(transform.position, hitboxDimensions, Quaternion.identity, playerMask);
@@ -65,9 +81,12 @@ public class PartyState : MonoBehaviour
         Debug.Log("Party Monster triggered.");  //Replace with animation stuff later
 
         triggered = true;
+        
 
         yield return new WaitForSeconds(explosionTimer - 0.5f);
 
+        partyConfettiSound.enabled = true;
+        partyPopSound.enabled = true;
         Debug.Log("EXPLOSION"); //Replace with animation stuff later
 
         Collider[] explosionCheck = Physics.OverlapBox(transform.position, explosionDimensions, Quaternion.identity, playerMask);
@@ -82,7 +101,7 @@ public class PartyState : MonoBehaviour
 
         Instantiate(explosion, new Vector3(transform.position.x, transform.position.y-1f, transform.position.z), Quaternion.identity);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
 
         Destroy(gameObject);    //Delete self
     }

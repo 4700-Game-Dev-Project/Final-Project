@@ -56,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
         walking,
         sprinting,
         crouching,
-        air
+        air,
+        idle
     }
 
     public enum PowerUps

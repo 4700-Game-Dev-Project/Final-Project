@@ -7,9 +7,12 @@ public class Footsteps : MonoBehaviour
     public AudioSource walkSound, sprintSound;
     Rigidbody rb;
 
+    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
     }
 
     private void Update()
@@ -27,9 +30,12 @@ public class Footsteps : MonoBehaviour
                 sprintSound.enabled = false;
             }
         }
-            
+
         else
+        {
             walkSound.enabled = false;
+            sprintSound.enabled = false;
+        }
     }
 
 }
