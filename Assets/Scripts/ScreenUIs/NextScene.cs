@@ -7,11 +7,11 @@ public class NextScene : MonoBehaviour
 {
     void OnEnable()
     {
-        SceneManager.LoadScene("SplashScreen", LoadSceneMode.Single);
+        SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
     }
 
     public void SkipIntro()
     {
-        SceneManager.LoadScene("SplashScreen", LoadSceneMode.Single);
+        SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
     }
 }

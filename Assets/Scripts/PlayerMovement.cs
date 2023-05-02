@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float groundDrag;
-    public float sprintSpeed;
+    public float addSprintSpeed;
 
     [Header("Jumping")]
     public float jumpForce;
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool readyToJump;
 
     [Header("Crouching")]
-    public float crouchSpeed;
+    public float crouchSpeedDeduct;
     public float crouchYScale;
     private float startYScale;
 
@@ -35,10 +35,13 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;
     public Transform orientation;
 
-    [Header("Sound Effect")]
-  //  public AudioSource walkSound;
 
-/// 
+
+    [Header("Sound Effect")]
+    //  public AudioSource walkSound;
+
+    /// 
+    private AttributesManager atm;
 
     float horizontalInput;
     float verticalInput;
@@ -73,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
      //   isRunning = false;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
+        atm = GetComponent<AttributesManager>();
         startYScale = transform.localScale.y;
     }
 
@@ -192,19 +195,20 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
-            moveSpeed = crouchSpeed;
+            //moveSpeed = crouchSpeed;
+            moveSpeed = atm.GetSpeed() - crouchSpeedDeduct;
         }
         // Mode - Sprinting
         else if(grounded && Input.GetKey(sprintKey))
         {
             state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
+            moveSpeed = atm.GetSpeed() + addSprintSpeed;
         }
         // Mode - Walking
         else if (grounded)
         {
             state = MovementState.walking;
-            moveSpeed = walkSpeed;
+            moveSpeed = atm.GetSpeed();
         }
         // Mode - Air
         else
