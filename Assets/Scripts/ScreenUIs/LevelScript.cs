@@ -9,6 +9,7 @@ public class LevelScript : MonoBehaviour
 
     public Vector3 hitboxDimensions;
     public GameObject endScreen;
+    public static bool endScreenActive = false;
     public int currentLevel;
     public LayerMask playerMask;
     public float contactCD = 1.0f; //A cooldown on anything that happens when this object contacts the player
@@ -35,6 +36,7 @@ public class LevelScript : MonoBehaviour
 
     private IEnumerator ActivateEndUI()
     {
+        endScreenActive = true;
         contactOnCD = true;
         Pass();
         Debug.Log("working??");
@@ -69,7 +71,11 @@ public class LevelScript : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene("Level" + currentLevel);
+        Debug.Log("ok this is before scene load");
+        SceneManager.LoadScene("GameLevel" + ++currentLevel);
+        Debug.Log("right after scene load");
+        endScreenActive = false;
+        Debug.Log("and right after deactivating screen");
     }
 
     public void ReturnToHome()
