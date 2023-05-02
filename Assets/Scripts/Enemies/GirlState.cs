@@ -24,6 +24,7 @@ public class GirlState : MonoBehaviour
     {
         m_Rigidbody = GetComponent<Rigidbody>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        player = GameObject.Find("Player");
 
         shouldChase = false;
         hitboxDimensions = (transform.localScale * 4.0f) / 2f;
