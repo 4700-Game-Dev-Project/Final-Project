@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
     public static bool paused;
     public AudioSource spaceOnClick;
     //EventSystem eventSystem = EventSystemManager.currentSystem;
-    public GameObject btn;
     EventSystem m_EventSystem;
 
     void OnEnable()

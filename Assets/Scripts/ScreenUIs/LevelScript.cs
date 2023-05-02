@@ -70,10 +70,16 @@ public class LevelScript : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene("GameLevel" + (++currentLevel));
-        endScreenActive = false;
-        Time.timeScale = 1.0f;
-        Debug.Log("end screen activated in scene load: " + endScreenActive);
+        if(currentLevel < 4)
+        {
+            SceneManager.LoadScene("GameLevel" + (++currentLevel));
+            endScreenActive = false;
+            Time.timeScale = 1.0f;
+        }
+        else
+        {
+            SceneManager.LoadScene("ExitStory");
+        }
     }
 
     public void ReturnToHome()
