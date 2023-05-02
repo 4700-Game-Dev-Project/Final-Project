@@ -12,6 +12,19 @@ public class LevelMgr : MonoBehaviour
     {
         levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
 
+        SetUpButtons();
+    }
+
+    public void ResetGame()
+    {
+        levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
+        PlayerPrefs.DeleteAll();
+        SetUpButtons();
+        Debug.Log("Levels unlocked reset: " + levelsUnlocked);
+    }
+
+    private void SetUpButtons()
+    {
         for(int i = 0; i< lvlButtons.Length; i++)
         {
             lvlButtons[i].interactable = false;
@@ -21,12 +34,5 @@ public class LevelMgr : MonoBehaviour
         {
             lvlButtons[i].interactable = true;
         }
-    }
-
-    public void ResetGame()
-    {
-        levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
-        PlayerPrefs.DeleteAll();
-        Debug.Log("Levels unlocked reset: " + levelsUnlocked);
     }
 }

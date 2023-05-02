@@ -8,9 +8,9 @@ using UnityEngine.Events;
 public class TitleScreenMgr : MonoBehaviour
 {
 
-    public void LoadScene(int sceneNum)
+    public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene("Level" + sceneNum);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void EndGame()
