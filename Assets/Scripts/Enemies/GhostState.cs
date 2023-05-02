@@ -29,8 +29,15 @@ public class GhostState : MonoBehaviour
     public bool isMoving;
     private Vector3 lastPosition;
 
+    [Header("Sound")]
+    public AudioSource GhostSound;
+
+
+  
+
     void Start()
     {
+
         attriMan = GetComponent<AttributesManager>();
         m_Rigidbody = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
@@ -41,6 +48,8 @@ public class GhostState : MonoBehaviour
 
         isMoving = false;
         lastPosition = transform.position;
+
+        GhostSound.enabled = true;
     }
 
     void FixedUpdate()
@@ -53,6 +62,7 @@ public class GhostState : MonoBehaviour
 
         if (seePlayer)
         {
+            GhostSound.enabled = true;
             float countdown = chaseTimer;
             while (countdown >= 0)
             {
@@ -61,6 +71,8 @@ public class GhostState : MonoBehaviour
                 countdown -= Time.smoothDeltaTime;
             }
         }
+        else
+            GhostSound.enabled = false;
 
         //Detects collision with player based on hitbox
         Collider[] hitbox = Physics.OverlapBox(transform.position, hitboxDimensions, Quaternion.identity, playerMask);
@@ -154,5 +166,6 @@ public class GhostState : MonoBehaviour
         }
 
     }
+
 
 }

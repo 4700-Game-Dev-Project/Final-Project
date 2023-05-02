@@ -7,22 +7,29 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject escMenu;
     public bool paused;
+    public AudioSource spaceOnClick;
 
     void Start()
     {
         escMenu.SetActive(false);
+        spaceOnClick.enabled = false;
+
+
     }
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            if(paused)
+            spaceOnClick.enabled = true;
+            if (paused)
             {
+                spaceOnClick.Play();
                 Resume();
             }
             else
             {
+                spaceOnClick.Play();
                 Debug.Log("reading??");
                 Pause();
             }
