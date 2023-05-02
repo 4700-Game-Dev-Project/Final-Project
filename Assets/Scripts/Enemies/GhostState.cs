@@ -49,7 +49,7 @@ public class GhostState : MonoBehaviour
         isMoving = false;
         lastPosition = transform.position;
 
-        GhostSound.enabled = false;
+        GhostSound.enabled = true;
     }
 
     void FixedUpdate()
