@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.243
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03093815, g: 0.03259786, b: 0.029422125, a: 0.243}
+  m_IndirectSpecularColor: {r: 0.030938005, g: 0.032597724, b: 0.029422052, a: 0.243}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1419,6 +1419,7 @@ MonoBehaviour:
   health: 100
   attack: 1
   speed: 0
+  healAmount: 0
 --- !u!1 &108026260
 GameObject:
   m_ObjectHideFlags: 0
@@ -19597,6 +19598,7 @@ MonoBehaviour:
   health: 100
   attack: 10
   speed: 0
+  healAmount: 0
 --- !u!1001 &1341212887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27367,6 +27369,7 @@ MonoBehaviour:
   health: 100
   attack: 1
   speed: 0
+  healAmount: 0
 --- !u!1 &1845744618
 GameObject:
   m_ObjectHideFlags: 0
@@ -31468,6 +31471,7 @@ MonoBehaviour:
   health: 100
   attack: 1
   speed: 0
+  healAmount: 0
 --- !u!4 &2127264137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2643001834780861912, guid: 3b5028cb4bbf442c78f2c349f480ab88, type: 3}
@@ -32317,6 +32321,10 @@ PrefabInstance:
       propertyPath: spaceOnClick
       value: 
       objectReference: {fileID: 12228108}
+    - target: {fileID: 6063167170756004350, guid: 3179a50a74d8d42d599b6b1ab9a3b43c, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3179a50a74d8d42d599b6b1ab9a3b43c, type: 3}
 --- !u!1001 &6402445814851101446
