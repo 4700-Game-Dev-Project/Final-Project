@@ -17,6 +17,7 @@ public class PlayerCam : MonoBehaviour
         //LevelScript.endScreenActive = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Debug.Log("initialized");
     }
 
     private void Update()
@@ -24,7 +25,6 @@ public class PlayerCam : MonoBehaviour
         if(PauseMenu.paused || LevelScript.endScreenActive == true)
         {
             Cursor.lockState = CursorLockMode.None;
-            Debug.Log("game is paused and mouse is free");
         }
         else{
             Cursor.lockState = CursorLockMode.Locked;

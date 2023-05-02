@@ -39,7 +39,6 @@ public class LevelScript : MonoBehaviour
         endScreenActive = true;
         contactOnCD = true;
         Pass();
-        Debug.Log("working??");
         Time.timeScale = 0f;
         endScreen.SetActive(true);
         yield return new WaitForSeconds(contactCD);
@@ -71,11 +70,10 @@ public class LevelScript : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        Debug.Log("ok this is before scene load");
-        SceneManager.LoadScene("GameLevel" + ++currentLevel);
-        Debug.Log("right after scene load");
+        SceneManager.LoadScene("GameLevel" + (++currentLevel));
         endScreenActive = false;
-        Debug.Log("and right after deactivating screen");
+        Time.timeScale = 1.0f;
+        Debug.Log("end screen activated in scene load: " + endScreenActive);
     }
 
     public void ReturnToHome()
