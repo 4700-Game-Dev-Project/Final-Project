@@ -16,16 +16,17 @@ public class LevelMgr : MonoBehaviour
         {
             lvlButtons[i].interactable = false;
         }
-
+        Debug.Log("Levels unlocked: " + levelsUnlocked);
         for(int i = 0; i<levelsUnlocked; i++)
         {
             lvlButtons[i].interactable = true;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetGame()
     {
-        
+        levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
+        PlayerPrefs.DeleteAll();
+        Debug.Log("Levels unlocked reset: " + levelsUnlocked);
     }
 }
