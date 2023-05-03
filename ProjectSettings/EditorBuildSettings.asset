@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevel4.unity
     guid: 51b893d003ac51c448013f6921881b77
+  - enabled: 1
+    path: Assets/Scenes/Stories/ExitStory.unity
+    guid: e116c2bcfc4e34daa99fea8d79825ce2
   - enabled: 0
     path: Assets/Scenes/Level2.unity
     guid: 65784c26ee8d140418eae575bdb22b8a

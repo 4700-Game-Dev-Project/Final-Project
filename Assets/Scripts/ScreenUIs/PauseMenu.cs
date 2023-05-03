@@ -9,19 +9,14 @@ public class PauseMenu : MonoBehaviour
     public GameObject escMenu;
     public static bool paused;
     public AudioSource spaceOnClick;
-    //EventSystem eventSystem = EventSystemManager.currentSystem;
     EventSystem m_EventSystem;
 
     void OnEnable()
     {
-        //Fetch the current EventSystem. Make sure your Scene has one.
         m_EventSystem = EventSystem.current;
     }
     void Start()
     {
-        //eventSystem.SetSelectedGameObject( btn, new BaseEventData(eventSystem));
-       // var eventSystem = EventSystemManager.currentSystem;
-       // eventSystem.SetSelectedGameObject( gameObject, new BaseEventData(eventSystem));
         escMenu.SetActive(false);
         spaceOnClick.enabled = false;
 

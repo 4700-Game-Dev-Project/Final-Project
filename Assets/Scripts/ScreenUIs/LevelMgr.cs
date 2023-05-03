@@ -20,7 +20,6 @@ public class LevelMgr : MonoBehaviour
         levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
         PlayerPrefs.DeleteAll();
         SetUpButtons();
-        Debug.Log("Levels unlocked reset: " + levelsUnlocked);
     }
 
     private void SetUpButtons()
@@ -29,7 +28,6 @@ public class LevelMgr : MonoBehaviour
         {
             lvlButtons[i].interactable = false;
         }
-        Debug.Log("Levels unlocked: " + levelsUnlocked);
         for(int i = 0; i<levelsUnlocked; i++)
         {
             lvlButtons[i].interactable = true;

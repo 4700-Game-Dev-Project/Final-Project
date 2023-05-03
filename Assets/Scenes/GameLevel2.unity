@@ -39435,6 +39435,30 @@ PrefabInstance:
       propertyPath: currentLevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6860590293258819438, guid: 6ec8fe1681d004e9ab9a885dd594dcf1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860590293258819438, guid: 6ec8fe1681d004e9ab9a885dd594dcf1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860590293258819438, guid: 6ec8fe1681d004e9ab9a885dd594dcf1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860590293258819438, guid: 6ec8fe1681d004e9ab9a885dd594dcf1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860590293258819438, guid: 6ec8fe1681d004e9ab9a885dd594dcf1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -75.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860590293258819438, guid: 6ec8fe1681d004e9ab9a885dd594dcf1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 66.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6860590293668199238, guid: 6ec8fe1681d004e9ab9a885dd594dcf1, type: 3}
       propertyPath: m_Name
       value: MenuSystem
