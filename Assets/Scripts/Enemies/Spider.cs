@@ -4,24 +4,32 @@ using UnityEngine;
 
 public class Spider : MonoBehaviour
 {
-    public Transform up, down;
     public int speed = 2;
-    Vector3 targetPos;
+    private Vector3 downPos;
+    private Vector3 upPos;
+    private Vector3 targetPos;
+    public float maxHeight = 15f;
 
     void Start()
     {
-        targetPos = up.position;
+        downPos = transform.position;
+        upPos = new Vector3(downPos.x, downPos.y + maxHeight, downPos.z);
+        targetPos = upPos;
     }
 
     void Update()
     {
-        if(Vector3.Distance(transform.position, up.position) < 0.1f)
-            targetPos = down.position;
+        if(Vector3.Distance(transform.position, upPos) < 0.1f)
+        {
+            targetPos = downPos;
+        }
 
-        if(Vector3.Distance(transform.position, down.position) < 0.01f)
-            targetPos = up.position;
+        if(Vector3.Distance(transform.position, downPos) < 0.01f)
+        {
+            targetPos = upPos;
+        }
 
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision col)
