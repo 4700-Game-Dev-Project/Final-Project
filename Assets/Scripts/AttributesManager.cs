@@ -8,7 +8,10 @@ public class AttributesManager : MonoBehaviour
     public int health;
     public int attack;
     public float speed;
+
+    [Header("Support Ability")]
     public int healAmount;
+    public int speedAmount;
 
 
     private void TakeDamage(int amount)
@@ -60,12 +63,12 @@ public class AttributesManager : MonoBehaviour
         health = amount;
     }
 
-    public void setSpeedToTarget(GameObject target, int s)
+    public void setSpeedToTarget(GameObject target)
     {
         var atm = target.GetComponent<AttributesManager>();
         if (atm != null)
         {
-            atm.setSpeed(healAmount);
+            atm.setSpeed(speedAmount);
         }
     }
 
