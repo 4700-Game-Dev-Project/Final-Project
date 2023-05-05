@@ -11,7 +11,7 @@ public class AttributesManager : MonoBehaviour
     public int healAmount;
 
 
-    public void TakeDamage(int amount)
+    private void TakeDamage(int amount)
     {
         Debug.Log("Damage Taken: " + amount);
         health -= amount;
@@ -36,7 +36,7 @@ public class AttributesManager : MonoBehaviour
         
     }
 
-    public void addHealth(int amount)
+    private void addHealth(int amount)
     {
         if (health + amount > 100)
         {
@@ -55,7 +55,7 @@ public class AttributesManager : MonoBehaviour
         }
     }
     
-    public void setHealth(int amount)
+    private void setHealth(int amount)
     {
         health = amount;
     }
@@ -69,7 +69,7 @@ public class AttributesManager : MonoBehaviour
         }
     }
 
-    public void setSpeed(int s)
+    private void setSpeed(int s)
     {
         speed = s;
     }

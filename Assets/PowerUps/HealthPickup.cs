@@ -17,7 +17,7 @@ public class HealthPickup : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
             atm = other.GetComponent<AttributesManager>();
             CurrentHealth = atm.GetHealth();
-            atm.addHealth(amount1);
+            //atm.addHealth(amount1);
             Destroy(gameObject);
         }
       public void addHealth(int amount){
