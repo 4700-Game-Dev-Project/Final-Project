@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3258311440524452083, guid: 919b6e12bf7bf6b4a8a2a4ebcad0e467, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6132105920084067680, guid: 919b6e12bf7bf6b4a8a2a4ebcad0e467, type: 3}
       propertyPath: m_Type
       value: 3
@@ -38,6 +42,10 @@ PrefabInstance:
     - target: {fileID: 6132105920084067680, guid: 919b6e12bf7bf6b4a8a2a4ebcad0e467, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132105920084067681, guid: 919b6e12bf7bf6b4a8a2a4ebcad0e467, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6132105920084067681, guid: 919b6e12bf7bf6b4a8a2a4ebcad0e467, type: 3}
       propertyPath: m_AnchorMax.x
@@ -77,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6132105920644229097, guid: 919b6e12bf7bf6b4a8a2a4ebcad0e467, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Canvas Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6132105920644229097, guid: 919b6e12bf7bf6b4a8a2a4ebcad0e467, type: 3}
       propertyPath: m_IsActive
