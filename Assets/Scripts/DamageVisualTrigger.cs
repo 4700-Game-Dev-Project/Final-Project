@@ -14,6 +14,10 @@ public class DamageVisualTrigger : MonoBehaviour
     private void Start()
     {
         playersHealth = atmPlayer.GetHealth();
+        var color = _onHitScreenVisual.GetComponent<Image>().color;
+        color.a = 0f;
+        _onHitScreenVisual.GetComponent<Image>().color = color;
+
 
     }
 
@@ -54,6 +58,7 @@ public class DamageVisualTrigger : MonoBehaviour
             }
         }
     }
+
 
     private void gotHurt()
     {
