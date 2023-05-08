@@ -5677,11 +5677,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8710600888970763131, guid: 97a4b078c0091b947acd8736a2f47884, type: 3}
   m_PrefabInstance: {fileID: 10423978}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &572353598 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7397650518318881254, guid: 3f5e6453e7389d94187520bd95604401, type: 3}
-  m_PrefabInstance: {fileID: 782840012}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &572404486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8710600888970763131, guid: 97a4b078c0091b947acd8736a2f47884, type: 3}
@@ -7962,7 +7957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397650518318881254, guid: 3f5e6453e7389d94187520bd95604401, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7397650518318881254, guid: 3f5e6453e7389d94187520bd95604401, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16142,7 +16137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397650518318881254, guid: 3f5e6453e7389d94187520bd95604401, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397650518318881254, guid: 3f5e6453e7389d94187520bd95604401, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22810,7 +22805,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 572353598}
   - {fileID: 30892292}
   - {fileID: 1402362036}
   m_Father: {fileID: 0}
