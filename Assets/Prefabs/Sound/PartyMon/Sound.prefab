@@ -32,13 +32,14 @@ Transform:
   - {fileID: 4327235861801302126}
   - {fileID: 1206081212842065093}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &560384421889599966
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 6090459985494974010}
     m_Modifications:
     - target: {fileID: 1691733676089234715, guid: 2bf425555601e5d4eb50609ca61ed296, type: 3}
@@ -85,11 +86,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5855142393803450172, guid: 2bf425555601e5d4eb50609ca61ed296, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6153785468294196918, guid: 2bf425555601e5d4eb50609ca61ed296, type: 3}
       propertyPath: m_Name
       value: ConfettiSound
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bf425555601e5d4eb50609ca61ed296, type: 3}
 --- !u!4 &1206081212842065093 stripped
 Transform:
@@ -101,6 +107,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 6090459985494974010}
     m_Modifications:
     - target: {fileID: 1195815773670272369, guid: 2fa07b4062127d14fb8cc63b65ca0a65, type: 3}
@@ -151,7 +158,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClownSound
       objectReference: {fileID: 0}
+    - target: {fileID: 7331825274627847788, guid: 2fa07b4062127d14fb8cc63b65ca0a65, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa07b4062127d14fb8cc63b65ca0a65, type: 3}
 --- !u!4 &2923779283011770698 stripped
 Transform:
@@ -163,6 +175,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 6090459985494974010}
     m_Modifications:
     - target: {fileID: 4348554784055566532, guid: 882b9e978922c8248bf90a5fc6531b12, type: 3}
@@ -213,7 +226,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9096031406231155804, guid: 882b9e978922c8248bf90a5fc6531b12, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 882b9e978922c8248bf90a5fc6531b12, type: 3}
 --- !u!4 &4327235861801302126 stripped
 Transform:

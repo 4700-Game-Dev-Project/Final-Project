@@ -170,6 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215319582311663947}
   - component: {fileID: 6049015621847816244}
+  - component: {fileID: 7248901965921982494}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -193,7 +194,7 @@ Transform:
   - {fileID: 346043002703186485}
   - {fileID: 172116066821847933}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6049015621847816244
 Rigidbody:
@@ -211,3 +212,17 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &7248901965921982494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153568804690406024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2877e5722dfbd74dbf6600b568b3109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onHitScreenVisual: {fileID: 0}
+  atmPlayer: {fileID: 0}

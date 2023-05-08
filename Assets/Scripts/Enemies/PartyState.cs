@@ -80,11 +80,13 @@ public class PartyState : MonoBehaviour
     {
         Debug.Log("Party Monster triggered.");  //Replace with animation stuff later
 
+       
+
         triggered = true;
-        
 
         yield return new WaitForSeconds(explosionTimer - 0.5f);
 
+        
         partyConfettiSound.enabled = true;
         partyPopSound.enabled = true;
         Debug.Log("EXPLOSION"); //Replace with animation stuff later
