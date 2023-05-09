@@ -48,7 +48,6 @@ public class NormalKeyDoorTrigger : MonoBehaviour
                     {
                         myDoor.Play("door_open_90", 0, 0.0f);
                         openedFromSideA = true;
-                        Debug.Log("cum");
                     }
                     else
                     {
