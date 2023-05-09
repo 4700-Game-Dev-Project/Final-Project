@@ -13,6 +13,11 @@ public class FinalDoorTrigger : MonoBehaviour
     private static bool hasKey = false;
 
 
+    public void setKeyFalse()
+    {
+        hasKey = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
