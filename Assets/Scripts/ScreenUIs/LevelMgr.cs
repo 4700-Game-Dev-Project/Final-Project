@@ -28,8 +28,9 @@ public class LevelMgr : MonoBehaviour
         {
             lvlButtons[i].interactable = false;
         }
-        for(int i = 0; i<levelsUnlocked; i++)
+        for(int i = 0; i<lvlButtons.Length; i++)
         {
+            if(i < levelsUnlocked)
             lvlButtons[i].interactable = true;
         }
     }
