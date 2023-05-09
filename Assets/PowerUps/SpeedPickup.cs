@@ -4,31 +4,23 @@ using UnityEngine;
 
 public class SpeedPickup : MonoBehaviour
 {
-    private float moveSpeedBoost;
-    //public Image FillImage;
-    private float boostTimer;
-    public AttributesManager atm;
-    private bool boosting;
-    // Start is called before the first frame update
-   private void OnTriggerEnter(Collider other) {
-     atm = other.GetComponent<AttributesManager>();
-          moveSpeedBoost =atm.GetSpeed() * 5;
-            //boosting = true;
-           // if(boosting){
-               // boostTimer += Time.deltaTime;
-               // if(boostTimer >=5){
-              //  moveSpeedBoost =atm.GetSpeed() * 2;
-               // boostTimer = 0;
-               // boosting = false;
-            //}
-            Destroy(gameObject);
-    }
-             
-    //}
+    private GameObject player; // Reference of a player
+    private AttributesManager attriMan; /// Reference of Attribute Manager attach to this object
     
-    // Update is called once per frame
-    void Update()
+    /// Implement a timer for speed duration
+      
+    private void Start()
     {
-        
+        attriMan = GetComponent<AttributesManager>();
+        player = GameObject.Find("Player");
+        if (player == null)
+            Debug.Log("Player not found");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        attriMan.setSpeedToTarget(player);
+        Debug.Log("Speed!");
+        Destroy(gameObject);
     }
 }

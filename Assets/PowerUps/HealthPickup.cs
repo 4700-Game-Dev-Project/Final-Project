@@ -4,29 +4,26 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    public int amount1 = 50;
-     public int health;
+    
     // Start is called before the first frame update
     
     
-    private float CurrentHealth;
-    public AttributesManager atm;
-    
-   
+      private GameObject player; // Reference of a player
+    private AttributesManager attriMan; /// Reference of Attribute Manager attach to this object
 
-    private void OnTriggerEnter(Collider other) {
-            atm = other.GetComponent<AttributesManager>();
-            CurrentHealth = atm.GetHealth();
-            //atm.addHealth(amount1);
-            Destroy(gameObject);
-        }
-      public void addHealth(int amount){
-        if (health + amount > 100)
-        {
-            health = 100;
-            return;
-        }
-        health += amount;
+    private void Start()
+    {
+        attriMan = GetComponent<AttributesManager>();
+        player = GameObject.Find("Player");
+        if (player == null)
+            Debug.Log("Player not found");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        attriMan.AddHealthToTarget(player);
+        Debug.Log("Heal!");
+        Destroy(gameObject);
     }
 
    
