@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Enemies\SkeletonState.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
+     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
      <Compile Include="Assets\Scripts\Enemies\GirlState.cs" />
      <Compile Include="Assets\Scripts\DmgTest.cs" />
      <Compile Include="Assets\Animations\Girl\DemoScene\Scripts\MyLightSc.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Animations\Girl\DemoScene\Scripts\Akane_CharacterController.cs" />
      <Compile Include="Assets\Scripts\HealthChange.cs" />
      <Compile Include="Assets\Scripts\StartDoorTrigger.cs" />
+     <Compile Include="Assets\Scripts\Enemies\MetalSound.cs" />
      <Compile Include="Assets\Scripts\ScreenUIs\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\FinalDoorTrigger.cs" />
      <Compile Include="Assets\Scripts\ScreenUIs\LevelMgr.cs" />

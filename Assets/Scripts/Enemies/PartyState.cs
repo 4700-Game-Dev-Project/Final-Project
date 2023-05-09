@@ -103,7 +103,7 @@ public class PartyState : MonoBehaviour
 
         Instantiate(explosion, new Vector3(transform.position.x, transform.position.y-1f, transform.position.z), Quaternion.identity);
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.8f);
 
         Destroy(gameObject);    //Delete self
     }

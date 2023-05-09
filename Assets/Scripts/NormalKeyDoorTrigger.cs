@@ -17,6 +17,12 @@ public class NormalKeyDoorTrigger : MonoBehaviour
     private static bool hasKey1 = false;
     private static bool hasKey2 = false;
 
+    public void setKeyFalse()
+    {
+        hasKey1 = false;
+        hasKey2 = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -42,7 +48,6 @@ public class NormalKeyDoorTrigger : MonoBehaviour
                     {
                         myDoor.Play("door_open_90", 0, 0.0f);
                         openedFromSideA = true;
-                        Debug.Log("cum");
                     }
                     else
                     {

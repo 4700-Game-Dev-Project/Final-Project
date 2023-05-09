@@ -13,12 +13,18 @@ public class AttributesManager : MonoBehaviour
     public int healAmount;
     public int speedAmount;
 
+    public bool playerDead = false;
 
     private void TakeDamage(int amount)
     {
         Debug.Log("Damage Taken: " + amount);
         health -= amount;
         Debug.Log("CurrentHealth: " + health);
+
+        if (health <= 0)
+        {
+            playerDead = true;
+        }
     }
     public void DealDamage(GameObject target)
     {

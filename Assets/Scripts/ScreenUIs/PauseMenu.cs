@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject escMenu;
+    public GameObject dmgImage;
     public static bool paused;
     public AudioSource spaceOnClick;
     EventSystem m_EventSystem;
@@ -31,11 +32,13 @@ public class PauseMenu : MonoBehaviour
             if (paused)
             {
                 spaceOnClick.Play();
+                dmgImage.SetActive(true);
                 Resume();
             }
             else
             {
                 spaceOnClick.Play();
+                dmgImage.SetActive(false);
                 Debug.Log("reading??");
                 Pause();
             }

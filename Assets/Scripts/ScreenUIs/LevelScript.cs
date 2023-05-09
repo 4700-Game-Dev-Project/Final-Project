@@ -15,12 +15,20 @@ public class LevelScript : MonoBehaviour
     public float contactCD = 1.0f; //A cooldown on anything that happens when this object contacts the player
     private bool contactOnCD = false;
 
+    public FinalDoorTrigger finalDoors;
+    public NormalKeyDoorTrigger normalKey;
+    
+    [Header("Player Death Screen")]
+    public GameObject deathScreen;
+
     void Start()
     {
         endScreen.SetActive(false);
+        deathScreen.SetActive(false);
         //currentLevel = SceneManager.GetActiveScene().buildIndex;
         Debug.Log("currentLevel: " + currentLevel);
         hitboxDimensions = (transform.localScale * 1.1f) / 2f;
+
     }
 
     void FixedUpdate()
@@ -68,18 +76,40 @@ public class LevelScript : MonoBehaviour
         endScreen.SetActive(true);
     }
 
+    private void resetKeys()
+    {
+        finalDoors.setKeyFalse();
+        normalKey.setKeyFalse();
+    }
+
+
     public void LoadNextLevel()
     {
         if(currentLevel < 4)
         {
+            resetKeys();
             SceneManager.LoadScene("GameLevel" + (++currentLevel));
             endScreenActive = false;
             Time.timeScale = 1.0f;
         }
         else
         {
+            resetKeys();
             SceneManager.LoadScene("ExitStory");
         }
+    }
+
+    private IEnumerator ActivateReset()
+    {
+        resetKeys();
+        deathScreen.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("GameLevel" + (currentLevel));
+    }
+
+    public void ResetLevel()
+    {
+        StartCoroutine(ActivateReset());
     }
 
     public void ReturnToHome()
