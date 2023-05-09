@@ -8,7 +8,7 @@ public class Spider : MonoBehaviour
     private Vector3 downPos;
     private Vector3 upPos;
     private Vector3 targetPos;
-    public float maxHeight = 15f;
+    public float maxHeight = 6f;
 
     void Start()
     {

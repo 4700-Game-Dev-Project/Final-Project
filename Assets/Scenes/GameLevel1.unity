@@ -11444,7 +11444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  maxHeight: 15
+  maxHeight: 6
 --- !u!1001 &759896158
 PrefabInstance:
   m_ObjectHideFlags: 0
