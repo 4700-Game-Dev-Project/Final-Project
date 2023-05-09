@@ -6761,33 +6761,13 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1392810277}
     m_Modifications:
-    - target: {fileID: 1370669094789910608, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
-      propertyPath: speed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8815622957323631268, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
       propertyPath: m_Name
       value: Metalon (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8815622957323631271, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
-      propertyPath: metalonTimer
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 8815622957323631277, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815622957323631277, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.378948
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815622957323631277, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.378948
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815622957323631277, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.378948
       objectReference: {fileID: 0}
     - target: {fileID: 8815622957323631277, guid: 105dfbc6670185842a07ada9fb57c88a, type: 3}
       propertyPath: m_LocalPosition.x

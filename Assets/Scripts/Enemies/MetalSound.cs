@@ -9,20 +9,39 @@ public class MetalSound : MonoBehaviour
     private MetalonState metalState;
     public AudioSource metalWalk;
     public AudioSource metalRoar;
-
+    private float roarFreq = 5f;
+    private float nextRoar;
     void Start()
     {
         metalState = parent.GetComponent<MetalonState>();
         metalWalk.enabled = false;
         metalRoar.enabled = false;
+        nextRoar = Time.time + 3f;
+
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (metalState.isMoving)
+        {
             metalWalk.enabled = true;
+            if(Time.time > nextRoar)
+            {
+                metalRoar.enabled = true;
+                nextRoar = Time.time + roarFreq;
+                metalRoar.Play();
+                Debug.Log("Roar");
+            }
+
+        }
+
         else
+        {
             metalWalk.enabled = false;
+        }
+            
+
+        
     }
 }
