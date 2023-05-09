@@ -14,10 +14,14 @@ public class LevelScript : MonoBehaviour
     public LayerMask playerMask;
     public float contactCD = 1.0f; //A cooldown on anything that happens when this object contacts the player
     private bool contactOnCD = false;
+    
+    [Header("Player Death Screen")]
+    public GameObject deathScreen;
 
     void Start()
     {
         endScreen.SetActive(false);
+        deathScreen.SetActive(false);
         //currentLevel = SceneManager.GetActiveScene().buildIndex;
         Debug.Log("currentLevel: " + currentLevel);
         hitboxDimensions = (transform.localScale * 1.1f) / 2f;
@@ -80,6 +84,18 @@ public class LevelScript : MonoBehaviour
         {
             SceneManager.LoadScene("ExitStory");
         }
+    }
+
+    private IEnumerator ActivateReset()
+    {
+        deathScreen.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("GameLevel" + (currentLevel));
+    }
+
+    public void ResetLevel()
+    {
+        StartCoroutine(ActivateReset());
     }
 
     public void ReturnToHome()
