@@ -437,7 +437,7 @@ Transform:
   - {fileID: 2111075860988925012}
   - {fileID: 1002618099792363648}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -0.727, z: 0}
 --- !u!1 &2111075861028487491
 GameObject:
@@ -742,7 +742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1215319582311663947, guid: 1b614f55745251f40a99214c40ff6b60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 50.1
       objectReference: {fileID: 0}
     - target: {fileID: 1215319582311663947, guid: 1b614f55745251f40a99214c40ff6b60, type: 3}
       propertyPath: m_LocalPosition.y
@@ -750,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1215319582311663947, guid: 1b614f55745251f40a99214c40ff6b60, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1215319582311663947, guid: 1b614f55745251f40a99214c40ff6b60, type: 3}
       propertyPath: m_LocalRotation.w
@@ -869,6 +869,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8153568804690406024, guid: 1b614f55745251f40a99214c40ff6b60, type: 3}
   m_PrefabInstance: {fileID: 2105341983408196043}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799724141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7786977475623658307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2877e5722dfbd74dbf6600b568b3109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onHitScreenVisual: {fileID: 7438891053763728201}
+  atmPlayer: {fileID: 2111075862822457928}
 --- !u!114 &2111075862822457924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,20 +943,6 @@ MonoBehaviour:
   speed: 5
   healAmount: 0
   speedAmount: 0
---- !u!114 &1799724141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7786977475623658307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2877e5722dfbd74dbf6600b568b3109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onHitScreenVisual: {fileID: 7438891053763728201}
-  atmPlayer: {fileID: 2111075862822457928}
 --- !u!1001 &6242426829080847708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1123,7 +1123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3020575080069336680, guid: 2aaabfcddf2afe24f9f077870bac45ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 50.1
       objectReference: {fileID: 0}
     - target: {fileID: 3020575080069336680, guid: 2aaabfcddf2afe24f9f077870bac45ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1131,7 +1131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3020575080069336680, guid: 2aaabfcddf2afe24f9f077870bac45ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3020575080069336680, guid: 2aaabfcddf2afe24f9f077870bac45ae, type: 3}
       propertyPath: m_LocalRotation.w
