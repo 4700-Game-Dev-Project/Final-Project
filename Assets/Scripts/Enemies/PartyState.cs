@@ -52,12 +52,11 @@ public class PartyState : MonoBehaviour
         partyPopSound.enabled = false;
         partyConfettiSound.enabled = false;
         //hitboxDimensions = (transform.localScale * 1.1f) / 2f;
+        StartCoroutine(visionRoutine());
     }
 
     void Update()
     {
-        StartCoroutine(visionRoutine());
-
         if (seePlayer && triggered == false)
         {
             StartCoroutine(explosionRoutine());

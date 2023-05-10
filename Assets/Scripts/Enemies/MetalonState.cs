@@ -49,6 +49,7 @@ public class MetalonState : MonoBehaviour
 
         isMoving = false;
         lastPosition = transform.position;
+        StartCoroutine(visionRoutine());
     }
 
 
@@ -95,8 +96,6 @@ public class MetalonState : MonoBehaviour
         {
             StartCoroutine(contactRoutine());
         }
-
-        StartCoroutine(visionRoutine());
     }
 
     //Handles chasing the player

@@ -37,7 +37,6 @@ public class GhostState : MonoBehaviour
 
     void Start()
     {
-
         attriMan = GetComponent<AttributesManager>();
         m_Rigidbody = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
@@ -50,6 +49,7 @@ public class GhostState : MonoBehaviour
         lastPosition = transform.position;
 
         GhostSound.enabled = true;
+        StartCoroutine(visionRoutine());
     }
 
     void FixedUpdate()
@@ -80,8 +80,6 @@ public class GhostState : MonoBehaviour
         {
             StartCoroutine(contactRoutine());
         }
-
-        StartCoroutine(visionRoutine());
 
         //Detects movement for the sake of animation
         if (transform.position != lastPosition)

@@ -45,6 +45,7 @@ public class SkeletonState : MonoBehaviour
         hitboxDimensions = (transform.localScale * 1.1f) / 2f;
 
         agent.SetDestination(waypoints[currentWaypoint].position);
+        StartCoroutine(visionRoutine());
     }
 
     void FixedUpdate()
@@ -69,8 +70,6 @@ public class SkeletonState : MonoBehaviour
         {
             StartCoroutine(contactRoutine());
         }
-
-        StartCoroutine(visionRoutine());
     }
 
     private void OnTriggerEnter(Collider other)
