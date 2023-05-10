@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: _onHitScreenVisual
       value: 
       objectReference: {fileID: 7438891053763728201}
+    - target: {fileID: 7281827408700095864, guid: 1b614f55745251f40a99214c40ff6b60, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8153568804690406024, guid: 1b614f55745251f40a99214c40ff6b60, type: 3}
       propertyPath: m_Name
       value: Player
