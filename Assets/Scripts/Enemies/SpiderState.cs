@@ -16,6 +16,8 @@ public class SpiderState : MonoBehaviour
 
     private AttributesManager attriMan;
 
+    public AudioSource spiderAtkSound;
+
     void Start()
     {
         attriMan = GetComponent<AttributesManager>();
@@ -40,6 +42,7 @@ public class SpiderState : MonoBehaviour
     {
         contactOnCD = true;
         //Debug.Log("DMG");
+        spiderAtkSound.Play();
         attriMan.DealDamage(player);
 
         yield return new WaitForSeconds(contactCD);
