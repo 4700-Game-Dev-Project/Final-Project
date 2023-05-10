@@ -37,7 +37,7 @@ Transform:
   - {fileID: 5866490728048004050}
   - {fileID: 8864568978693993620}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &2587936385711632483
 MeshFilter:
@@ -159,16 +159,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  attack: 4
+  attack: 60
   speed: 0
   healAmount: 0
   speedAmount: 0
+  playerDead: 0
 --- !u!1001 &1653019680332312579
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 2587936385711632482}
     m_Modifications:
     - target: {fileID: 5159228069126568913, guid: 1dacc378b7a85e64696e56ce8d0ce8a7, type: 3}
@@ -236,7 +236,6 @@ PrefabInstance:
       value: P02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dacc378b7a85e64696e56ce8d0ce8a7, type: 3}
 --- !u!4 &5866490728048004050 stripped
 Transform:
@@ -266,7 +265,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 2587936385711632482}
     m_Modifications:
     - target: {fileID: 4493696006038283246, guid: 4f806cea7b897a045af5f2a365035801, type: 3}
@@ -275,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6090459985494974010, guid: 4f806cea7b897a045af5f2a365035801, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6090459985494974010, guid: 4f806cea7b897a045af5f2a365035801, type: 3}
       propertyPath: m_LocalPosition.x
@@ -330,7 +328,6 @@ PrefabInstance:
       value: Sound
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f806cea7b897a045af5f2a365035801, type: 3}
 --- !u!82 &1286973029932910912 stripped
 AudioSource:
