@@ -18423,7 +18423,7 @@ MonoBehaviour:
   attack: 0
   speed: 0
   healAmount: 0
-  speedAmount: 10
+  speedAmount: 5
   playerDead: 0
 --- !u!114 &1025937444
 MonoBehaviour:
