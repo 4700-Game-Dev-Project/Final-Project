@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\PowerUps\Bounce.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Enemies\PartyAnimator.cs" />
      <Compile Include="Assets\Scripts\Enemies\GhostState.cs" />
@@ -52,6 +53,7 @@
      <Compile Include="Assets\PowerUps\HealthPickup.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Enemies\SkeletonState.cs" />
+     <Compile Include="Assets\Scripts\HeadBobController.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerDeath.cs" />
      <Compile Include="Assets\Scripts\Enemies\GirlState.cs" />
